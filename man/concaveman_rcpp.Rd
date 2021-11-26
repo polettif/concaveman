@@ -6,6 +6,13 @@
 \usage{
 concaveman_rcpp(xy, concavity = 2, length_threshold = 0)
 }
+\arguments{
+\item{xy}{xy}
+
+\item{concavity}{concavity}
+
+\item{length_threshold}{length_threshold}
+}
 \description{
 concaveman_rcpp
 }

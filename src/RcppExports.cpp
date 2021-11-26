@@ -5,6 +5,11 @@
 
 using namespace Rcpp;
 
+#ifdef RCPP_USE_GLOBAL_ROSTREAM
+Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
+Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
+#endif
+
 // rcpp_concaveman_mat
 Rcpp::DataFrame rcpp_concaveman_mat(Rcpp::NumericMatrix xy, Rcpp::IntegerVector hull_in, const double concavity, const double length_threshold);
 RcppExport SEXP _concaveman_rcpp_concaveman_mat(SEXP xySEXP, SEXP hull_inSEXP, SEXP concavitySEXP, SEXP length_thresholdSEXP) {
