@@ -4,7 +4,7 @@
 #'
 #'
 #' @importFrom Rcpp evalCpp
-#' @useDynLib concaveman, .registration = TRUE
+#' @useDynLib concaver, .registration = TRUE
 #' @docType package
 #' @name concaveman
 NULL

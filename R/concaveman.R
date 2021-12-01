@@ -56,6 +56,10 @@ concaveman.sf <- function(points, concavity = 2, length_threshold = 0) {
 
 #' concaveman_rcpp
 #'
+#' @param xy xy
+#' @param concavity concavity
+#' @param length_threshold length_threshold
+#'
 #' @export
 #' @rdname concaveman_rcpp
 concaveman_rcpp <- function (xy, concavity = 2, length_threshold = 0) {

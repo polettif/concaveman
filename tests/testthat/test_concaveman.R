@@ -1,4 +1,4 @@
-library(concaveman)
+library(concaver)
 library(sf)
 data(points)
 context("main tests")

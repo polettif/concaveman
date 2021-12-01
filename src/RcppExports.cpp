@@ -5,9 +5,14 @@
 
 using namespace Rcpp;
 
+#ifdef RCPP_USE_GLOBAL_ROSTREAM
+Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
+Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
+#endif
+
 // rcpp_concaveman_mat
 Rcpp::DataFrame rcpp_concaveman_mat(Rcpp::NumericMatrix xy, Rcpp::IntegerVector hull_in, const double concavity, const double length_threshold);
-RcppExport SEXP _concaveman_rcpp_concaveman_mat(SEXP xySEXP, SEXP hull_inSEXP, SEXP concavitySEXP, SEXP length_thresholdSEXP) {
+RcppExport SEXP _concaver_rcpp_concaveman_mat(SEXP xySEXP, SEXP hull_inSEXP, SEXP concavitySEXP, SEXP length_thresholdSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -21,11 +26,11 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_concaveman_rcpp_concaveman_mat", (DL_FUNC) &_concaveman_rcpp_concaveman_mat, 4},
+    {"_concaver_rcpp_concaveman_mat", (DL_FUNC) &_concaver_rcpp_concaveman_mat, 4},
     {NULL, NULL, 0}
 };
 
-RcppExport void R_init_concaveman(DllInfo *dll) {
+RcppExport void R_init_concaver(DllInfo *dll) {
     R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
 }

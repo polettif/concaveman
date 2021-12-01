@@ -1,4 +1,4 @@
 library(testthat)
-library(concaveman)
+library(concaver)
 
-test_check("concaveman")
+test_check("concaver")

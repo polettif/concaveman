@@ -1,4 +1,4 @@
-Package: concaveman
+Package: concaver
 Type: Package
 Title: A Very Fast 2D Concave Hull Algorithm
 Version: 1.1.0
@@ -21,7 +21,7 @@ Imports: V8,
          jsonlite,
          dplyr,
          Rcpp
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
 Suggests: testthat
 LinkingTo: Rcpp
 URL: https://joelgombin.github.io/concaveman, http://www.github.com/joelgombin/concaveman

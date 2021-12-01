@@ -2,8 +2,8 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 #' rcpp_concaveman_mat
-#' @noRd 
+#' @noRd
 rcpp_concaveman_mat <- function(xy, hull_in, concavity, length_threshold) {
-    .Call(`_concaveman_rcpp_concaveman_mat`, xy, hull_in, concavity, length_threshold)
+    .Call(`_concaver_rcpp_concaveman_mat`, xy, hull_in, concavity, length_threshold)
 }
 
